@@ -1,0 +1,26 @@
+{
+  "args": {
+    "task": "main_task",
+    "arglen": 8,
+    "userdata": "",
+    "userlen": 0
+  },
+  "machine_config": {
+    "num_processors": 4,
+    "processors": [
+      { "id": 1, "kind": "LOC_PROC", "address_space": 0 },
+      { "id": 2, "kind": "TOC_PROC", "address_space": 1 },
+      { "id": 3, "kind": "UTIL_PROC", "address_space": 2 },
+      { "id": 4, "kind": "IO_PROC", "address_space": 3 }
+    ],
+    "memories": [
+      { "id": 1, "kind": "SYSTEM_MEM", "capacity": 4096, "bandwidth": 100, "latency": 10 },
+      { "id": 2, "kind": "GPU_FB_MEM", "capacity": 2048, "bandwidth": 200, "latency": 5 }
+    ],
+    "affinities": [
+      { "processor_id": 1, "memory_id": 1, "bandwidth": 100, "latency": 10 },
+      { "processor_id": 2, "memory_id": 2, "bandwidth": 200, "latency": 5 }
+    ]
+  }
+}
+
